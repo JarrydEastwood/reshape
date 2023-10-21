@@ -7,6 +7,8 @@ import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import React from 'react';
+import YouTubePlayer from '../components/YouTubePlayer';
 
 export default function Index({ posts, globalData }) {
   return (
@@ -14,9 +16,12 @@ export default function Index({ posts, globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {globalData.blogTitle}
-        </h1>
+        <h3 className="text-xl lg:text-2xl text-center font-base pb-12">
+          Website coming soon
+        </h3>
+
+        <YouTubePlayer videoId="eZxFh2KUb_c" />
+        
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -46,7 +51,11 @@ export default function Index({ posts, globalData }) {
           ))}
         </ul>
       </main>
-      <Footer copyrightText={globalData.footerText} />
+   
+      <p className='mt-48'> A game made <span className='text-sm'> (by) </span> <a href="https://www.juxforyou.com/" target="_blank" className='underline font-bold'>JUXforyou</a></p>
+      
+            {/* <Footer copyrightText={globalData.footerText} /> */}
+
       <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"

@@ -2,12 +2,9 @@ import Link from 'next/link';
 
 export default function Header({ name }) {
   return (
-    <header className="pt-20 pb-12">
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
+    <header className="pt-12 pb-6">
+      <img class="h-auto max-w-lg rounded-lg" src="./static/img/logo.png" alt="image description"/>
       <p className="text-2xl dark:text-white text-center">
-        <Link href="/">
-          <a>{name}</a>
-        </Link>
       </p>
     </header>
   );
